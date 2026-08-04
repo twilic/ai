@@ -18,7 +18,7 @@
     "fmt:check": "oxfmt --check",
     "lint": "oxlint packages fixtures benchmarks examples inspector",
     "lint:fix": "oxlint --fix packages fixtures benchmarks examples inspector",
-    "typecheck": "pnpm -r --filter './packages/**' --filter '@twilic/ai-inspector' run typecheck",
+    "typecheck": "pnpm --filter @twilic/ai run build && pnpm -r --filter './packages/**' --filter '@twilic/ai-inspector' run typecheck",
     "test": "pnpm -r --filter './packages/**' run test",
     "bench": "pnpm --filter @twilic/ai-benchmarks start",
     "inspector": "pnpm --filter @twilic/ai-inspector dev",
