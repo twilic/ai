@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ### Added
 
 - Examples for OpenAI normalize, session diff, size compare, convert, Agents tracing, and AI SDK transport.
+- Integration tests for core e2e flows, OpenAI normalize roundtrips, Agents tracing persistence, and AI SDK transport over mock HTTP.
 
 ### Fixed
 
