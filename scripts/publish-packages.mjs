@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { spawnSync } from "node:child_process";
-import { readFileSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -28,9 +28,21 @@ function packageExists(name, version) {
   return result.status === 0 && result.stdout.trim() === version;
 }
 
+function ensureNpmIgnore(packageDir) {
+  const npmignorePath = path.join(packageDir, ".npmignore");
+  // Keep publish contents driven by package.json "files"; avoid root .gitignore.
+  writeFileSync(
+    npmignorePath,
+    ["node_modules/", "src/", "tests/", "*.tsbuildinfo", ".turbo/"].join("\n") +
+      "\n",
+    "utf8",
+  );
+}
+
 function publishPackage(relativePath) {
+  const packageDir = path.join(root, relativePath);
   const packageJson = JSON.parse(
-    readFileSync(path.join(root, relativePath, "package.json"), "utf8"),
+    readFileSync(path.join(packageDir, "package.json"), "utf8"),
   );
   const { name, version } = packageJson;
 
@@ -39,7 +51,9 @@ function publishPackage(relativePath) {
     return;
   }
 
-  const args = ["publish", "--access", "public", "--prefix", relativePath];
+  ensureNpmIgnore(packageDir);
+
+  const args = ["publish", "--access", "public"];
   if (withProvenance) {
     args.push("--provenance");
   }
@@ -48,9 +62,14 @@ function publishPackage(relativePath) {
     `publish ${name}@${version}${withProvenance ? " (provenance)" : ""}`,
   );
   const result = spawnSync("npm", args, {
-    cwd: root,
+    cwd: packageDir,
     encoding: "utf8",
     stdio: "inherit",
+    env: {
+      ...process.env,
+      // Avoid monorepo root lifecycle scripts (husky prepare).
+      npm_config_ignore_scripts: "false",
+    },
   });
 
   if (result.status !== 0) {
