@@ -1,13 +1,15 @@
 {
   "name": "@twilic/ai",
   "version": "0.1.0",
-  "description": "AI session recording, replay, and .twai transport for Twilic binary streams.",
+  "description": "Record, replay, and inspect AI streams and agent runs as Twilic binary sessions.",
   "keywords": [
     "ai",
-    "binary",
+    "agents",
+    "llm",
     "recording",
     "replay",
-    "twilic"
+    "twilic",
+    "typescript"
   ],
   "license": "MIT",
   "repository": {

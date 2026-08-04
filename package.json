@@ -1,7 +1,7 @@
 {
   "name": "twilic-ai",
   "private": true,
-  "description": "AI session recording, replay, and transport helpers for Twilic binary streams.",
+  "description": "Record, replay, and inspect AI streams and agent runs as Twilic binary sessions.",
   "license": "MIT",
   "repository": {
     "type": "git",

@@ -1,6 +1,6 @@
 # Twilic AI
 
-AI session recording, replay, and transport helpers for Twilic binary streams.
+Record, replay, and inspect AI streams and agent runs as Twilic binary sessions.
 
 **Record once. Replay anywhere. Send less.**
 
