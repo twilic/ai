@@ -1,0 +1,24 @@
+{
+  "name": "@twilic/ai-benchmarks",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Benchmark Twilic AI session encodings.",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.mjs",
+    "build": "node -e \"console.log('benchmarks: no build step')\"",
+    "typecheck": "node -e \"console.log('benchmarks: no typecheck step')\"",
+    "test": "node -e \"console.log('benchmarks: no tests')\""
+  },
+  "dependencies": {
+    "@msgpack/msgpack": "^3.1.2",
+    "@twilic/ai": "workspace:*",
+    "@twilic/core": "^3.0.0",
+    "cbor-x": "^1.6.0",
+    "cli-table3": "^0.6.5",
+    "tinybench": "^4.0.1"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

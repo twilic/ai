@@ -1,0 +1,41 @@
+{
+  "name": "twilic-ai",
+  "private": true,
+  "description": "AI session recording, replay, and transport helpers for Twilic binary streams.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twilic/ai.git"
+  },
+  "homepage": "https://github.com/twilic/ai#readme",
+  "bugs": {
+    "url": "https://github.com/twilic/ai/issues"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "pnpm -r --filter './packages/**' --filter '@twilic/ai-inspector' run build",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "lint": "oxlint packages fixtures benchmarks examples inspector",
+    "lint:fix": "oxlint --fix packages fixtures benchmarks examples inspector",
+    "typecheck": "pnpm -r --filter './packages/**' --filter '@twilic/ai-inspector' run typecheck",
+    "test": "pnpm -r --filter './packages/**' run test",
+    "bench": "pnpm --filter @twilic/ai-benchmarks start",
+    "inspector": "pnpm --filter @twilic/ai-inspector dev",
+    "release:check": "node ./scripts/verify-tag-version.mjs",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@types/node": "^24.1.0",
+    "husky": "^9.1.7",
+    "oxfmt": "^0.50.0",
+    "oxlint": "^1.65.0",
+    "typescript": "^5.8.2"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "packageManager": "pnpm@10.18.1"
+}

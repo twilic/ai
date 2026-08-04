@@ -1,0 +1,8 @@
+{"type":"session.start","sequence":0,"timestamp":1700002000000,"sessionId":"agent-tools-001","provider":"openai","model":"gpt-4.1","data":{"mode":"agent"}}
+{"type":"tool.started","sequence":1,"timestamp":1700002000100,"sessionId":"agent-tools-001","provider":"openai","model":"gpt-4.1","toolCallId":"call_weather_1","data":{"name":"get_weather","input":{"city":"Tokyo"}}}
+{"type":"tool.input.delta","sequence":2,"timestamp":1700002000150,"sessionId":"agent-tools-001","provider":"openai","model":"gpt-4.1","toolCallId":"call_weather_1","data":{"delta":"{\"city\":\"Tokyo\"}"}}
+{"type":"tool.output","sequence":3,"timestamp":1700002000300,"sessionId":"agent-tools-001","provider":"openai","model":"gpt-4.1","toolCallId":"call_weather_1","data":{"output":{"tempC":24,"condition":"cloudy"}}}
+{"type":"text.delta","sequence":4,"timestamp":1700002000400,"sessionId":"agent-tools-001","provider":"openai","model":"gpt-4.1","responseId":"resp_agent_1","data":{"delta":"It is 24C and cloudy in Tokyo."}}
+{"type":"retrieval.result","sequence":5,"timestamp":1700002000500,"sessionId":"agent-tools-001","provider":"openai","model":"gpt-4.1","data":{"results":[{"id":"doc-1","score":0.91}]}}
+{"type":"trace.span","sequence":6,"timestamp":1700002000600,"sessionId":"agent-tools-001","provider":"openai","model":"gpt-4.1","data":{"phase":"end","name":"tool.get_weather","durationMs":150}}
+{"type":"session.end","sequence":7,"timestamp":1700002000700,"sessionId":"agent-tools-001","provider":"openai","model":"gpt-4.1","data":{"status":"ok"}}

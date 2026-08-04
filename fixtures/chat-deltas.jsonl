@@ -1,0 +1,8 @@
+{"type":"session.start","sequence":0,"timestamp":1700001000000,"sessionId":"chat-deltas-001","provider":"openai","model":"gpt-4.1-mini","data":{}}
+{"type":"text.delta","sequence":1,"timestamp":1700001000050,"sessionId":"chat-deltas-001","provider":"openai","model":"gpt-4.1-mini","responseId":"resp_d1","data":{"delta":"Hel"}}
+{"type":"text.delta","sequence":2,"timestamp":1700001000100,"sessionId":"chat-deltas-001","provider":"openai","model":"gpt-4.1-mini","responseId":"resp_d1","data":{"delta":"lo"}}
+{"type":"text.delta","sequence":3,"timestamp":1700001000150,"sessionId":"chat-deltas-001","provider":"openai","model":"gpt-4.1-mini","responseId":"resp_d1","data":{"delta":", "}}
+{"type":"text.delta","sequence":4,"timestamp":1700001000200,"sessionId":"chat-deltas-001","provider":"openai","model":"gpt-4.1-mini","responseId":"resp_d1","data":{"delta":"world"}}
+{"type":"reasoning.delta","sequence":5,"timestamp":1700001000250,"sessionId":"chat-deltas-001","provider":"openai","model":"gpt-4.1-mini","responseId":"resp_d1","data":{"delta":"Checked greeting policy."}}
+{"type":"response.completed","sequence":6,"timestamp":1700001000300,"sessionId":"chat-deltas-001","provider":"openai","model":"gpt-4.1-mini","responseId":"resp_d1","data":{}}
+{"type":"session.end","sequence":7,"timestamp":1700001000400,"sessionId":"chat-deltas-001","provider":"openai","model":"gpt-4.1-mini","data":{"status":"ok"}}

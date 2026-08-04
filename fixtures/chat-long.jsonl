@@ -1,0 +1,8 @@
+{"type":"session.start","sequence":0,"timestamp":1700000000000,"sessionId":"chat-long-001","provider":"openai","model":"gpt-4.1","data":{"source":"fixture"}}
+{"type":"request.created","sequence":1,"timestamp":1700000000100,"sessionId":"chat-long-001","provider":"openai","model":"gpt-4.1","responseId":"resp_001","data":{"prompt":"Summarize Twilic AI sessions."}}
+{"type":"text.delta","sequence":2,"timestamp":1700000000200,"sessionId":"chat-long-001","provider":"openai","model":"gpt-4.1","responseId":"resp_001","data":{"delta":"Twilic AI sessions "}}
+{"type":"text.delta","sequence":3,"timestamp":1700000000300,"sessionId":"chat-long-001","provider":"openai","model":"gpt-4.1","responseId":"resp_001","data":{"delta":"capture provider events "}}
+{"type":"text.delta","sequence":4,"timestamp":1700000000400,"sessionId":"chat-long-001","provider":"openai","model":"gpt-4.1","responseId":"resp_001","data":{"delta":"in a compact replayable .twai file."}}
+{"type":"usage.updated","sequence":5,"timestamp":1700000000500,"sessionId":"chat-long-001","provider":"openai","model":"gpt-4.1","responseId":"resp_001","data":{"usage":{"input_tokens":42,"output_tokens":18}}}
+{"type":"response.completed","sequence":6,"timestamp":1700000000600,"sessionId":"chat-long-001","provider":"openai","model":"gpt-4.1","responseId":"resp_001","data":{"status":"completed"}}
+{"type":"session.end","sequence":7,"timestamp":1700000000700,"sessionId":"chat-long-001","provider":"openai","model":"gpt-4.1","data":{"status":"ok"}}

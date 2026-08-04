@@ -1,0 +1,13 @@
+dist
+node_modules
+*.tsbuildinfo
+.DS_Store
+coverage
+.turbo
+inspector/dist
+*.log
+.env
+.env.*
+!*.twai
+examples/record-replay/sample.twai
+packages/core/tests/.tmp-*.twai

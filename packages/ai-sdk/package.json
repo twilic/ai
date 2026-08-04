@@ -1,0 +1,69 @@
+{
+  "name": "@twilic/ai-sdk",
+  "version": "0.1.0",
+  "description": "Vercel AI SDK transport and recorder helpers for Twilic AI sessions.",
+  "keywords": [
+    "ai",
+    "ai-sdk",
+    "transport",
+    "twilic"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twilic/ai.git",
+    "directory": "packages/ai-sdk"
+  },
+  "homepage": "https://github.com/twilic/ai/tree/main/packages/ai-sdk#readme",
+  "bugs": {
+    "url": "https://github.com/twilic/ai/issues"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "lint": "oxlint src tests",
+    "lint:fix": "oxlint --fix src tests",
+    "typecheck": "tsc --noEmit",
+    "test": "pnpm build && node --test --test-concurrency=1 \"tests/**/*.test.mjs\"",
+    "prepack": "pnpm build"
+  },
+  "dependencies": {
+    "@twilic/ai": "workspace:*"
+  },
+  "peerDependencies": {
+    "@twilic/core": "^3.0.0",
+    "ai": "*"
+  },
+  "peerDependenciesMeta": {
+    "ai": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@twilic/core": "^3.0.0",
+    "@types/node": "^24.1.0",
+    "typescript": "^5.8.2"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

@@ -1,0 +1,18 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+## [0.1.0] - 2026-08-04
+
+### Added
+
+- `@twilic/ai` core session recorder, `.twai` codec, replay, inspect, diff, and convert helpers.
+- `@twilic/ai-openai` OpenAI Responses API normalization utilities.
+- `@twilic/ai-sdk` Vercel AI SDK-compatible transport and recorder.
+- `@twilic/ai-agents` Agents SDK tracing processor mapping.
+- Synthetic fixtures, benchmarks, web inspector, and record/replay example.
+- CI workflow for format, lint, typecheck, and tests.

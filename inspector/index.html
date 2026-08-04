@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twilic AI Inspector</title>
+  </head>
+  <body>
+    <header>
+      <h1>Twilic AI Inspector</h1>
+      <p>Record once. Replay anywhere. Send less.</p>
+    </header>
+    <main class="layout">
+      <section class="panel">
+        <div id="dropzone">Drop a `.twai` or `.jsonl` session file</div>
+        <input id="file" type="file" accept=".twai,.jsonl,application/json" />
+        <div id="summary"></div>
+        <h2>Sizes</h2>
+        <div id="sizes"></div>
+      </section>
+      <section class="panel">
+        <div class="controls">
+          <button id="replay" type="button">Replay</button>
+          <label>
+            Speed
+            <input id="speed" type="number" min="0.1" step="0.1" value="4" />
+          </label>
+        </div>
+        <div id="timeline"></div>
+      </section>
+      <section class="panel">
+        <h2>Event detail</h2>
+        <pre id="detail">Load a session to inspect events.</pre>
+      </section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

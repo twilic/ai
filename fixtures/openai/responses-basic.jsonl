@@ -1,0 +1,6 @@
+{"type":"response.created","data":{"response":{"id":"resp_fixture_1","model":"gpt-4.1"}}}
+{"type":"response.output_text.delta","data":{"delta":"Hello from OpenAI fixture."}}
+{"type":"response.function_call_arguments.delta","data":{"delta":"{\"q\":\"twilic\"}","call_id":"call_1"}}
+{"type":"response.output_item.added","data":{"item":{"id":"item_1","type":"function_call","name":"search","call_id":"call_1"}}}
+{"type":"response.function_call_arguments.done","data":{"item":{"call_id":"call_1","output":{"hits":1}}}}
+{"type":"response.completed","data":{"response":{"id":"resp_fixture_1","usage":{"input_tokens":10,"output_tokens":5}}}}
