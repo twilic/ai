@@ -97,6 +97,10 @@ pnpm bench
 pnpm inspector
 ```
 
+## Releasing
+
+Tag a matching version (for example `v0.1.0`) to publish all packages via OIDC. See [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md).
+
 ## Changelog
 
 See [docs/CHANGELOG.md](docs/CHANGELOG.md).
