@@ -61,9 +61,4 @@ jobs:
         run: node ./scripts/prepare-npm-publish.mjs
 
       - name: Publish packages
-        run: |
-          set -euo pipefail
-          npm publish --access public --provenance --prefix packages/core
-          npm publish --access public --provenance --prefix packages/openai
-          npm publish --access public --provenance --prefix packages/ai-sdk
-          npm publish --access public --provenance --prefix packages/agents
+        run: node ./scripts/publish-packages.mjs --provenance
