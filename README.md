@@ -63,7 +63,15 @@ await writeSession("session.twai", {
 
 ## CLI
 
-Upcoming `@twilic/cli` commands (`twilic ai record`, `twilic ai replay`, `twilic ai inspect`) will build on the APIs exported from this repository.
+Use [`@twilic/cli`](https://github.com/twilic/cli) for session tooling:
+
+```bash
+twilic ai inspect session.twai
+twilic ai replay session.twai --speed 10
+twilic ai record --input events.jsonl -o session.twai
+```
+
+See the CLI README for `inspect`, `replay`, `diff`, `convert`, `record`, and `benchmark` subcommands.
 
 ## .twai
 
