@@ -1,5 +1,3 @@
-// Copyright (c) 2026 Twilic (maintained by Minagishl)
-
 import { readFile, writeFile } from "node:fs/promises";
 import { ensureTwilicInit } from "./init.js";
 import { decodeTwai, encodeTwai } from "./twai.js";

@@ -1,5 +1,3 @@
-// Copyright (c) 2026 Twilic (maintained by Minagishl)
-
 import { gzipSync, gunzipSync } from "node:zlib";
 import { decode } from "@twilic/core";
 import { assertTwilicInitialized } from "./init.js";

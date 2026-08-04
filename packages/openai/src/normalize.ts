@@ -1,5 +1,3 @@
-// Copyright (c) 2026 Twilic (maintained by Minagishl)
-
 import { randomUUID } from "node:crypto";
 import type { AIEvent } from "@twilic/ai";
 

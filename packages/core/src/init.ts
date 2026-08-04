@@ -1,5 +1,3 @@
-// Copyright (c) 2026 Twilic (maintained by Minagishl)
-
 import { init } from "@twilic/core";
 
 let initPromise: Promise<unknown> | null = null;

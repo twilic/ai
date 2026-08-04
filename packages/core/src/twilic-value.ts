@@ -1,5 +1,3 @@
-// Copyright (c) 2026 Twilic (maintained by Minagishl)
-
 import type { TwilicValue } from "@twilic/core";
 
 export function toTwilicValue(value: unknown): TwilicValue {

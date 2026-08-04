@@ -1,5 +1,3 @@
-// Copyright (c) 2026 Twilic (maintained by Minagishl)
-
 import { decode, encode, type TwilicValue } from "@twilic/core";
 import { assertTwilicInitialized } from "./init.js";
 import { toTwilicValue } from "./twilic-value.js";

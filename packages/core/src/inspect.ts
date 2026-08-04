@@ -1,5 +1,3 @@
-// Copyright (c) 2026 Twilic (maintained by Minagishl)
-
 import type { AIEvent, AISession, SessionSummary } from "./types.js";
 
 function textLength(value: unknown): number {

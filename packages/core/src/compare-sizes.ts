@@ -1,5 +1,3 @@
-// Copyright (c) 2026 Twilic (maintained by Minagishl)
-
 import { encode } from "@twilic/core";
 import { assertTwilicInitialized } from "./init.js";
 import { encodeTwai } from "./twai.js";

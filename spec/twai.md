@@ -1,7 +1,5 @@
 # .twai — Twilic AI Session Format
 
-Copyright (c) 2026 Twilic (maintained by Minagishl)
-
 `.twai` is the canonical on-disk and wire container for Twilic AI sessions.
 
 Tagline: **Record once. Replay anywhere. Send less.**

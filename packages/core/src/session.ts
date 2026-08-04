@@ -1,5 +1,3 @@
-// Copyright (c) 2026 Twilic (maintained by Minagishl)
-
 import type { AISession } from "./types.js";
 
 export function sessionFromEvents(

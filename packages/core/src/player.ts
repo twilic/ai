@@ -1,5 +1,3 @@
-// Copyright (c) 2026 Twilic (maintained by Minagishl)
-
 import type { AIEvent, AISession, ReplayOptions } from "./types.js";
 
 export interface AIPlayer extends AsyncIterable<AIEvent> {

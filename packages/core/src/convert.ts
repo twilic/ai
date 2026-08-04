@@ -1,5 +1,3 @@
-// Copyright (c) 2026 Twilic (maintained by Minagishl)
-
 import type { AISession, ConvertOptions } from "./types.js";
 
 function jsonReplacer(_key: string, value: unknown): unknown {

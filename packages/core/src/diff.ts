@@ -1,5 +1,3 @@
-// Copyright (c) 2026 Twilic (maintained by Minagishl)
-
 import type { AIEvent, AISession, SessionDiff } from "./types.js";
 import { inspectSession } from "./inspect.js";
 

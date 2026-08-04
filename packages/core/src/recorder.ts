@@ -1,5 +1,3 @@
-// Copyright (c) 2026 Twilic (maintained by Minagishl)
-
 import { createWriteStream, type WriteStream } from "node:fs";
 import { randomUUID } from "node:crypto";
 import { ensureTwilicInit } from "./init.js";

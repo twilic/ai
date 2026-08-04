@@ -1,5 +1,3 @@
-// Copyright (c) 2026 Twilic (maintained by Minagishl)
-
 export {
   CANONICAL_EVENT_TYPES,
   type AIEvent,
