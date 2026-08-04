@@ -1,0 +1,19 @@
+{
+  "name": "@twilic/ai-example-ai-sdk-transport",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node index.mjs",
+    "build": "node -e \"console.log('example: no build step')\"",
+    "typecheck": "node -e \"console.log('example: no typecheck step')\"",
+    "test": "node -e \"console.log('example: no tests')\""
+  },
+  "dependencies": {
+    "@twilic/ai": "workspace:*",
+    "@twilic/ai-sdk": "workspace:*",
+    "@twilic/core": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

@@ -37,6 +37,35 @@ function asNumber(value: unknown): number | undefined {
   return undefined;
 }
 
+function reviveJsonValue(value: unknown): unknown {
+  if (typeof value === "bigint") {
+    return Number(value);
+  }
+  if (Array.isArray(value)) {
+    return value.map((item) => reviveJsonValue(item));
+  }
+  if (value !== null && typeof value === "object") {
+    const out: Record<string, unknown> = {};
+    for (const [key, nested] of Object.entries(
+      value as Record<string, unknown>,
+    )) {
+      out[key] = reviveJsonValue(nested);
+    }
+    return out;
+  }
+  return value;
+}
+
+function asJsonRecord(value: unknown): Record<string, unknown> | undefined {
+  if (value === undefined || value === null) {
+    return undefined;
+  }
+  return reviveJsonValue(asRecord(value as TwilicValue)) as Record<
+    string,
+    unknown
+  >;
+}
+
 function asSessionMeta(value: TwilicValue): SessionMeta {
   const record = asRecord(value);
   if (record.format !== "twai") {
@@ -71,12 +100,8 @@ function asEvent(value: unknown): AIEvent {
     provider: typeof record.provider === "string" ? record.provider : undefined,
     outputIndex: asNumber(record.outputIndex),
     contentIndex: asNumber(record.contentIndex),
-    data: record.data
-      ? (asRecord(record.data as TwilicValue) as Record<string, unknown>)
-      : undefined,
-    extensions: record.extensions
-      ? (asRecord(record.extensions as TwilicValue) as Record<string, unknown>)
-      : undefined,
+    data: asJsonRecord(record.data),
+    extensions: asJsonRecord(record.extensions),
   };
 }
 

@@ -9,5 +9,7 @@ inspector/dist
 .env
 .env.*
 !*.twai
-examples/record-replay/sample.twai
+examples/**/*.twai
+examples/**/out/
 packages/core/tests/.tmp-*.twai
+

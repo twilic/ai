@@ -61,6 +61,16 @@ await writeSession("session.twai", {
 });
 ```
 
+## Examples
+
+See [`examples/`](./examples) for runnable demos (no API keys):
+
+```bash
+pnpm --filter @twilic/ai-example-size-compare start
+pnpm --filter @twilic/ai-example-openai-normalize start
+pnpm --filter @twilic/ai-example-agents-trace start
+```
+
 ## CLI
 
 Use [`@twilic/cli`](https://github.com/twilic/cli) for session tooling:

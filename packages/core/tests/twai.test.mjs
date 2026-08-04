@@ -125,6 +125,21 @@ test("convertSession outputs json and jsonl", async () => {
   assert.doesNotThrow(() => JSON.parse(asJson));
 });
 
+test("convertSession works after twai roundtrip with nested numbers", async () => {
+  const jsonl = await loadFixture("agent-tools.jsonl");
+  const session = sessionFromEvents(parseJsonlEvents(jsonl), {
+    sessionId: "agent-tools-convert",
+  });
+  const loaded = decodeTwai(encodeTwai(session));
+
+  const asJsonl = convertSession(loaded, { to: "jsonl" });
+  const asJson = convertSession(loaded, { to: "json" });
+
+  assert.match(asJsonl, /tool.started/);
+  assert.doesNotThrow(() => JSON.parse(asJson));
+  assert.equal(typeof loaded.events[0]?.timestamp, "number");
+});
+
 test("createAIPlayer replays events in order", async () => {
   const jsonl = await loadFixture("chat-deltas.jsonl");
   const session = sessionFromEvents(parseJsonlEvents(jsonl), {

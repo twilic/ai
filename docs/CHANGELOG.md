@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Added
+
+- Examples for OpenAI normalize, session diff, size compare, convert, Agents tracing, and AI SDK transport.
+
+### Fixed
+
+- Revive nested BigInt values after `.twai` decode so JSON conversion succeeds.
+
 ## [0.1.0] - 2026-08-04
 
 ### Added

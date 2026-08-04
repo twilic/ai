@@ -51,7 +51,70 @@ importers:
         specifier: ^4.0.1
         version: 4.1.0
 
+  examples/agents-trace:
+    dependencies:
+      '@twilic/ai':
+        specifier: workspace:*
+        version: link:../../packages/core
+      '@twilic/ai-agents':
+        specifier: workspace:*
+        version: link:../../packages/agents
+      '@twilic/core':
+        specifier: ^3.0.0
+        version: 3.1.0
+
+  examples/ai-sdk-transport:
+    dependencies:
+      '@twilic/ai':
+        specifier: workspace:*
+        version: link:../../packages/core
+      '@twilic/ai-sdk':
+        specifier: workspace:*
+        version: link:../../packages/ai-sdk
+      '@twilic/core':
+        specifier: ^3.0.0
+        version: 3.1.0
+
+  examples/convert:
+    dependencies:
+      '@twilic/ai':
+        specifier: workspace:*
+        version: link:../../packages/core
+      '@twilic/core':
+        specifier: ^3.0.0
+        version: 3.1.0
+
+  examples/diff-sessions:
+    dependencies:
+      '@twilic/ai':
+        specifier: workspace:*
+        version: link:../../packages/core
+      '@twilic/core':
+        specifier: ^3.0.0
+        version: 3.1.0
+
+  examples/openai-normalize:
+    dependencies:
+      '@twilic/ai':
+        specifier: workspace:*
+        version: link:../../packages/core
+      '@twilic/ai-openai':
+        specifier: workspace:*
+        version: link:../../packages/openai
+      '@twilic/core':
+        specifier: ^3.0.0
+        version: 3.1.0
+
   examples/record-replay:
+    dependencies:
+      '@twilic/ai':
+        specifier: workspace:*
+        version: link:../../packages/core
+      '@twilic/core':
+        specifier: ^3.0.0
+        version: 3.1.0
+
+  examples/size-compare:
     dependencies:
       '@twilic/ai':
         specifier: workspace:*
