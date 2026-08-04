@@ -1,6 +1,6 @@
 {
   "name": "@twilic/ai-sdk",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Vercel AI SDK transport and recorder helpers for Twilic AI sessions.",
   "keywords": [
     "ai",
